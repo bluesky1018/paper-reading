@@ -4,5 +4,33 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+## 关于本站
+
+这是一个**个人学术论文阅读笔记站点**，用于记录、整理和分享我读过的论文。
+
+### 为什么建立这个站点？
+
+1. **知识沉淀**: 将阅读过程中的思考系统化整理
+2. **方便回顾**: 快速查找和复习之前读过的论文
+3. **分享交流**: 与志同道合的研究者分享见解
+
+### 内容组织
+
+- **按领域分类**: NLP、CV、ML Theory、Robotics 等
+- **按标签检索**: attention、transformer、generative-model 等
+- **时间归档**: 按阅读时间倒序排列
+
+### 笔记格式
+
+每篇论文笔记包含：
+- 基本信息（作者、机构、发表会议）
+- 一句话总结
+- 核心贡献与关键实验
+- 个人思考与后续跟进
+- 相关论文推荐
+
+### 联系
+
+如有问题或建议，欢迎通过 [GitHub](https://github.com/bluesky1018) 联系我。
+
+> **免责声明**: 本站所有笔记均为个人学习记录，如有错误欢迎指正。
