@@ -12,7 +12,7 @@ math: true
 - **机构**: DeepSeek-AI
 - **发表**: arXiv 2025
 - **arXiv**: [2510.18234](https://arxiv.org/abs/2510.18234)
-- **代码**: [github.com/deepseek-ai/DeepSeek-OCR](http://github.com/deepseek-ai/DeepSeek-OCR)
+- **代码**: [github.com/deepseek-ai/DeepSeek-OCR](https://github.com/deepseek-ai/DeepSeek-OCR)
 
 ## 一句话总结
 
