@@ -19,6 +19,9 @@ math: true
 
 提出 **DeepEncoder V2**，用 LLM 风格的因果注意力机制替代传统 CLIP 编码器，让视觉 Token 能像人类阅读一样**按语义因果顺序重排**，而非机械地从左上到右下扫描。在 OmniDocBench v1.5 上达到 **91.09%** 的综合得分（超越 Qwen3-VL-235B、Gemini-2.5 Pro 等巨型模型），且最大视觉 Token 仅 **1120** 个——是同类模型中最少的。
 
+![DeepEncoder vs DeepEncoder V2：核心设计对比。左侧为 DeepEncoder（CLIP 双向编码），右侧为 DeepEncoder V2（LLM 风格因果编码 + 可学习查询实现语义重排）](/assets/img/deepseek-ocr2/x1.png)
+_Figure 1：DeepEncoder vs DeepEncoder V2 的核心架构对比_
+
 ---
 
 ## 核心问题：为什么需要「视觉因果流」？
@@ -49,6 +52,9 @@ DeepSeek-OCR 2 的核心洞察就是：**让视觉编码器学会这种因果阅
 ## 架构解析：DeepEncoder V2
 
 ### 整体流水线
+
+![DeepSeek-OCR 2 完整架构：输入图像经 SAM+Conv 分词器压缩，进入 LLM 风格视觉编码器（Qwen2 500M），因果流查询重排后送入 DeepSeek-3B MoE 解码器](/assets/img/deepseek-ocr2/x3.png)
+_Figure 3：DeepSeek-OCR 2 完整架构流水线_
 
 DeepSeek-OCR 2 的架构继承自 DeepSeek-OCR，分为**编码器**和**解码器**两部分。关键升级在编码器——从 DeepEncoder 升级到 DeepEncoder V2。
 
@@ -89,12 +95,18 @@ $$\mathbf{O} = \mathcal{D}\left(\pi_Q\left(\mathcal{T}^L\left(\mathcal{E}(\mathb
 
 **注意力掩码矩阵：**
 
+![注意力掩码设计：左半部分为 ViT 式双向注意力（视觉 Token），右半部分为 LLM 式因果注意力（查询 Token），拼接组成 DeepEncoder V2 的完整掩码](/assets/img/deepseek-ocr2/x5.png)
+_Figure 5：DeepEncoder V2 的注意力掩码架构——双向 + 因果的拼接设计_
+
 $$M = \begin{bmatrix} \mathbf{1}_{m \times m} & \mathbf{0}_{m \times n} \\ \mathbf{1}_{n \times m} & \text{LowerTri}(n) \end{bmatrix}, \quad n = m$$
 
 - 左上：视觉 Token 之间完全可见（双向）
 - 右上：视觉 Token 看不到查询 Token
 - 左下：查询 Token 可以看到所有视觉 Token
 - 右下：查询 Token 之间是因果的（下三角矩阵）
+
+![相关工作中的并行查询机制：DETR 用 100 个 object query 做目标检测，BLIP2 用 32 个 token query 做视觉压缩——都采用双向自注意力](/assets/img/deepseek-ocr2/x2.png)
+_Figure 2：DETR 和 BLIP2 中的并行查询机制——DeepEncoder V2 在此基础上引入了因果注意力_
 
 **为什么用 Qwen2-0.5B 初始化？**
 
@@ -118,6 +130,9 @@ $$n_{\text{query}} = \frac{W \times H}{16^2 \times 16}$$
 | 局部视图 | 768×768 | 144（共享） | 0~6 |
 
 总输出 Token 数 = $k \times 144 + 256$，范围 **[256, 1120]**
+
+![Multi-Crop Token 计算示意：局部视图 768×768 输出 144 个查询 Token（0~6 个裁剪），全局视图 1024×1024 输出 256 个查询 Token](/assets/img/deepseek-ocr2/x4.png)
+_Figure 4：Multi-Crop 策略下的 Token 数量计算_
 
 这个上限（1120）比 DeepSeek-OCR 的 1156 还少，且与 Gemini-3 Pro 的最大视觉 Token 预算持平。
 
