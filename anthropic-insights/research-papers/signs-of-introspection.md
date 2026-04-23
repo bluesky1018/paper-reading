@@ -1,9 +1,9 @@
 ---
-发表日期：2025年10月29日
-原文标题：Signs of Introspection in Large Language Models
-中文标题：大型语言模型中的自省迹象
-作者：Anthropic研究团队
-来源：https://www.anthropic.com/research/introspection
+发表日期: "2025年10月29日"
+原文标题: "Signs of Introspection in Large Language Models"
+中文标题: "大型语言模型中的自省迹象"
+作者: "Anthropic研究团队"
+来源: "https://www.anthropic.com/research/introspection"
 ---
 
 # 大型语言模型中的自省迹象

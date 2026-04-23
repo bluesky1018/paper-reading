@@ -1,9 +1,9 @@
 ---
-发表日期：2025年6月20日
-原文标题：Agentic Misalignment: How LLMs Could Be Insider Threats
-中文标题：智能体对齐失调：大型语言模型如何成为内部威胁
-作者：Lynch, Aengus; Wright, Benjamin; Larson, Caleb; Troy, Kevin K.; Ritchie, Stuart J.; Mindermann, Sören; Perez, Ethan; Hubinger, Evan（Anthropic，联合UCL、MATS、Mila）
-来源：https://www.anthropic.com/news/agentic-misalignment
+发表日期: "2025年6月20日"
+原文标题: "Agentic Misalignment: How LLMs Could Be Insider Threats"
+中文标题: "智能体对齐失调：大型语言模型如何成为内部威胁"
+作者: "Lynch, Aengus; Wright, Benjamin; Larson, Caleb; Troy, Kevin K.; Ritchie, Stuart J.; Mindermann, Sören; Perez, Ethan; Hubinger, Evan（Anthropic，联合UCL、MATS、Mila）"
+来源: "https://www.anthropic.com/news/agentic-misalignment"
 ---
 
 # 智能体对齐失调：大型语言模型如何成为内部威胁

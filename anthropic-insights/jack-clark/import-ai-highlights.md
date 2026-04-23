@@ -1,9 +1,9 @@
 ---
-发表日期：2026年3月（最新4期：#448-#451）
-原文标题：Import AI Newsletter - Latest 4 Issues
-中文标题：Jack Clark Import AI 周刊精选（第448-451期）
-作者：Jack Clark
-来源：https://jack-clark.net
+发表日期: "2026年3月（最新4期：#448-#451）"
+原文标题: "Import AI Newsletter - Latest 4 Issues"
+中文标题: "Jack Clark Import AI 周刊精选（第448-451期）"
+作者: "Jack Clark"
+来源: "https://jack-clark.net"
 ---
 
 # Jack Clark Import AI 周刊精选（第448-451期）
