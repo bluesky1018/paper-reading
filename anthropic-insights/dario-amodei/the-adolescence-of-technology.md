@@ -1,9 +1,9 @@
 ---
-发表日期：2026年1月
-原文标题：The Adolescence of Technology: Confronting and Overcoming the Risks of Powerful AI
-中文标题：技术的青春期：直面并克服强大AI的风险
-作者：Dario Amodei
-来源：https://darioamodei.com/essay/the-adolescence-of-technology
+发表日期: "2026年1月"
+原文标题: "The Adolescence of Technology: Confronting and Overcoming the Risks of Powerful AI"
+中文标题: "技术的青春期：直面并克服强大AI的风险"
+作者: "Dario Amodei"
+来源: "https://darioamodei.com/essay/the-adolescence-of-technology"
 ---
 
 # 技术的青春期：直面并克服强大AI的风险

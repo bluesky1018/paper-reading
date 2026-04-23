@@ -1,9 +1,9 @@
 ---
-发表日期：2025年1月
-原文标题：On DeepSeek and Export Controls
-中文标题：关于DeepSeek与出口管制
-作者：Dario Amodei
-来源：https://darioamodei.com/post/on-deepseek-and-export-controls
+发表日期: "2025年1月"
+原文标题: "On DeepSeek and Export Controls"
+中文标题: "关于DeepSeek与出口管制"
+作者: "Dario Amodei"
+来源: "https://darioamodei.com/post/on-deepseek-and-export-controls"
 ---
 
 # 关于DeepSeek与出口管制

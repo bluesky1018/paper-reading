@@ -1,9 +1,9 @@
 ---
-发表日期: 2025年4月
-原文标题: The Urgency of Interpretability
-中文标题: 可解释性的紧迫性
-作者: Dario Amodei
-来源: https://darioamodei.com/post/the-urgency-of-interpretability
+发表日期: "2025年4月"
+原文标题: "The Urgency of Interpretability"
+中文标题: "可解释性的紧迫性"
+作者: "Dario Amodei"
+来源: "https://darioamodei.com/post/the-urgency-of-interpretability"
 ---
 
 # 可解释性的紧迫性
